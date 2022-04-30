@@ -16,16 +16,21 @@ video {
     opacity: 0.8;
 }
 
-.layer1 {
-    background-color: #ccc;
-}
-
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
 }
+
+.layer1 {
+    background-color: #ccc;
+}
+
+.layer1 .container {
+    flex-direction: column;
+}
+
 
 .layer3 {
     visibility: hidden;
@@ -47,6 +52,7 @@ img {
     border: 3px solid black;
     height: 100%;
     width: 100%;
+    background-color: #ccc;
 }
 
 img:hover{
