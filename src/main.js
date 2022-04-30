@@ -26,17 +26,15 @@ function determineWin(computerChoice, playerChoice){
     }
     // Win conditions
     else if ((playerChoice === "Rock" && computerChoice === "Scissors") || (playerChoice === "Paper" && computerChoice ==="Rock")){
-        playerScore++;
         document.getElementById("outcomeHeader").innerHTML = "You Win!";
-        document.getElementById("playerScore").innerHTML = "Player Score: " + playerScore;
+        document.getElementById("playerScore").innerHTML = "Player Score: " + ++playerScore;
         return 1;
     }
 
     // Lose Condition
     else{
-        computerScore++;
         document.getElementById("outcomeHeader").innerHTML = "You Lose!";
-        document.getElementById("computerScore").innerHTML = "Computer Score: " + playerScore;
+        document.getElementById("computerScore").innerHTML = "Computer Score: " + ++computerScore;
         return -1;
     }
 }
