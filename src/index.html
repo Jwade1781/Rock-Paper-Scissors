@@ -19,35 +19,41 @@
         <div class="layer1">
             <div class="container">
                 <h1>ROCK PAPER SCISSORS</h1>
-                <p id="playerScore">Player Score: --</p>
-                <p id="computerScore">Computer Score: --</p>
+                <span>
+                    <p id="playerScore">Player Score: --</p>
+                    <p id="computerScore">Computer Score: --</p>
+                </span>
+            </div>
+        </div>
+
+
+
+        <!-- Player -->
+        <div class="layer2">
+            <div class="container">
+                <div>
+                    <span>
+                        <img src="../img/geo.png" alt="rock" onclick="playerTurn('Rock')">
+                        <p>Rock</p>
+                    </span>
+                    <span>
+                        <img src="../img/pyro.png" alt="paper" onclick="playerTurn('Paper')">
+                        <p>Paper</p>
+                    </span>
+                    <span>
+                        <img src="../img/hydro.png" alt="scissors" onclick="playerTurn('Scissors')">
+                        <p>Scissors</p>
+                    </span>
+                </div>
             </div>
         </div>
 
         <!-- Middle Ground -->
-        <div class="layer2">
-            <div class="container">
-                <button id="playButton" onclick="play()">Play!</button>
-
-            </div>
-        </div>
-
-        <!-- Player -->
         <div class="layer3">
             <div class="container">
                 <div>
-                    <span>
-                        <img src="../img/rock.png" alt="rock" onclick="playerTurn('Rock')">
-                        <p>Rock</p>
-                    </span>
-                    <span>
-                        <img src="../img/paper.png" alt="paper" onclick="playerTurn('Paper')">
-                        <p>Paper</p>
-                    </span>
-                    <span>
-                        <img src="../img/scissors.png" alt="scissors" onclick="playerTurn('Scissors')">
-                        <p>Scissors</p>
-                    </span>
+                    <h4 id="movesHeader"></h4>
+                    <h3 id="outcomeHeader"></h3>
                 </div>
             </div>
         </div>

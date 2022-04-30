@@ -6,18 +6,11 @@ let choiceDictionary = {
     2: "Scissors"
 }
 
-function play(){
-    const playerLayer = document.getElementsByClassName("layer3")[0];
-    const playButton = document.getElementById("playButton");
-    playButton.style.visibility = "hidden";
-    playerLayer.style.visibility = "visible";
-}
 
 function playerTurn(playerChoice){
-
+    document.getElementsByClassName("layer3")[0].style.visibility = "visible";
     let computerChoice = computerTurn();
     let result = determineWin(computerChoice, playerChoice);
-    console.log("Result: " + result + "\tPlayer choice: " + playerChoice + "\tComputer choice: " + computerChoice);
 }
 
 function computerTurn(){
@@ -26,12 +19,15 @@ function computerTurn(){
 }
 
 function determineWin(computerChoice, playerChoice){
-    if (playerChoice === computerChoice)
+    document.getElementById("movesHeader").innerHTML = "Player Move: " + playerChoice + "<br>Computer Move: " + computerChoice;
+    if (playerChoice === computerChoice){
+        document.getElementById("outcomeHeader").innerHTML = "Draw!";
         return 0;
-
+    }
     // Win conditions
     else if ((playerChoice === "Rock" && computerChoice === "Scissors") || (playerChoice === "Paper" && computerChoice ==="Rock")){
         playerScore++;
+        document.getElementById("outcomeHeader").innerHTML = "You Win!";
         document.getElementById("playerScore").innerHTML = "Player Score: " + playerScore;
         return 1;
     }
@@ -39,6 +35,7 @@ function determineWin(computerChoice, playerChoice){
     // Lose Condition
     else{
         computerScore++;
+        document.getElementById("outcomeHeader").innerHTML = "You Lose!";
         document.getElementById("computerScore").innerHTML = "Computer Score: " + playerScore;
         return -1;
     }

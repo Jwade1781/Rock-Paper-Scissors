@@ -1,7 +1,9 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
+
 video {
     position: absolute;
     width: 100%;
@@ -24,37 +26,68 @@ video {
 }
 
 .layer1 {
-    background-color: #ccc;
+    background-color: #222;
+    border: 1px solid black;
+    border-radius: 0 0 15px 15px;
+    color: #efefef;
 }
 
 .layer1 .container {
     flex-direction: column;
 }
 
-
-.layer3 {
-    visibility: hidden;
+.layer1 p{
+    display:inline-flex;
+    margin: 20px;
 }
-.layer3 .container div {
+
+.layer2 {
+    margin-top: 20%;
+}
+.layer2 .container div {
     display: inline-flex;
-    height: 200px;
+    height: 100px;
     width: auto;
     gap: 50px;
 }
 
-.layer3 .container div p {
+.layer2 .container div p {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Comic Sans here later */
     font-size: large;
+    font-weight: bolder;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5%;
+    opacity: 1.0;
 }
 
 img {
     border: 3px solid black;
     height: 100%;
     width: 100%;
-    background-color: #ccc;
+    background-color: #222;
 }
 
 img:hover{
     background-color: beige;
+}
+
+
+.layer3 {
+    visibility: hidden;
+}
+
+.layer3 .container {
+    margin: 80px;
+}
+
+.layer3 .container div {
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5%;
+    
 }
