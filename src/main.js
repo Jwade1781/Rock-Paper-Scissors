@@ -25,7 +25,7 @@ function determineWin(computerChoice, playerChoice){
         return 0;
     }
     // Win conditions
-    else if ((playerChoice === "Rock" && computerChoice === "Scissors") || (playerChoice === "Paper" && computerChoice ==="Rock")){
+    else if ((playerChoice === "Rock" && computerChoice === "Scissors") || (playerChoice === "Paper" && computerChoice ==="Rock") || (playerChoice ==="Scissors" && computerChoice ==="Paper")){
         document.getElementById("outcomeHeader").innerHTML = "You Win!";
         document.getElementById("playerScore").innerHTML = "Player Score: " + ++playerScore;
         return 1;
